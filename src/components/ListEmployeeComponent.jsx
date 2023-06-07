@@ -13,6 +13,7 @@ class ListEmployeeComponent extends Component {
     componentDidMount() {
         EmployeeService.getEmployees().then((res) => {
             this.setState({employees: res.data})
+            console.log(res.data)
         });
     }
 
