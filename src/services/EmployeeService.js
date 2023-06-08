@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const EMPLOYEE_API_BASE_URL = "http://localhost:8080/api/v1/employees" ;
+const EMPLOYEE_API_BASE_URL = "http://localhost:8082/api/v1/employees" ;
 
 
 class EmployeeService {
@@ -10,4 +10,5 @@ class EmployeeService {
     }
 }
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default new EmployeeService()
