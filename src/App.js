@@ -18,7 +18,7 @@ function App() {
 
                   <div className="container">
                       <Switch> http://localhost:3000/
-                          <Route path = "/" component = {ListEmployeeComponent}></Route>
+                          <Route path = "/" exact component = {ListEmployeeComponent}></Route>
                           <Route path = "/employees" component = {ListEmployeeComponent}></Route>
                           <Route path = "/add-employee" component = {CreateEmployeeComponent}></Route>
                           <ListEmployeeComponent/>
