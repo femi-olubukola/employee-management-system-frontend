@@ -36,6 +36,10 @@ class CreateEmployeeComponent extends Component {
         this.setState({emailId: event.target.value});
     }
 
+    cancel() {
+        this.props.history.push('/employees')
+    }
+
     render() {
         return (
             <div>
