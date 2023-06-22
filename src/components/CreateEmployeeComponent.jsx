@@ -12,15 +12,26 @@ class CreateEmployeeComponent extends Component {
 
     this.changeFirstNameHandler = this.changeFirstNameHandler.bind(this);
     this.changeLastNameHandler = this.changeLastNameHandler.bind(this);
-    this.changeEmailHandler = this.changeEmailHandler.bind(this);
+    // this.changeEmailHandler = this.changeEmailHandler.bind(this);
+    this.saveEmployee = this.saveEmployee.bind(this);
 }
+
+    saveEmployee = (e) => {
+        e.preventDefault();
+        let employee = {firstName: this.state.firstName,
+                        lastName: this.state.lastName,
+                        emailId: this.state.emailId}
+        console.log('employee => ' + JSON.stringify(employee))
+    }
 
     changeFirstNameHandler(event) {
         this.setState({firstName: event.target.value});
     }
+
     changeLastNameHandler(event) {
         this.setState({lastName: event.target.value});
     }
+
     changeEmailHandler(event) {
         this.setState({emailId: event.target.value});
     }
