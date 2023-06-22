@@ -9,10 +9,20 @@ class CreateEmployeeComponent extends Component {
         lastName: '',
         emailId: '',
     }
+
+    this.changeFirstNameHandler = this.changeFirstNameHandler.bind(this);
+    this.changeLastNameHandler = this.changeLastNameHandler.bind(this);
+    this.changeEmailHandler = this.changeEmailHandler.bind(this);
 }
 
     changeFirstNameHandler(event) {
         this.setState({firstName: event.target.value});
+    }
+    changeLastNameHandler(event) {
+        this.setState({lastName: event.target.value});
+    }
+    changeEmailHandler(event) {
+        this.setState({emailId: event.target.value});
     }
 
     render() {
@@ -29,6 +39,21 @@ class CreateEmployeeComponent extends Component {
                                         <input placeholder="First Name" name="firstName" className="form-control"
                                             value={this.state.firstName} onChange={this.changeFirstNameHandler} />
                                     </div>
+
+                                    <div className="form-group">
+                                        <label>Last Name: </label>
+                                        <input placeholder="Last Name" name="lastName" className="form-control"
+                                               value={this.state.lastName} onChange={this.changeLastNameHandler} />
+                                    </div>
+
+                                    <div className="form-group">
+                                        <label>Email Address: </label>
+                                        <input placeholder="Email Address" name="emailId" className="form-control"
+                                               value={this.state.emailId} onChange={this.changeEmailHandler} />
+                                    </div>
+
+                                    <button className="btn btn-succcess" onClick={this.saveEmployee}>Save</button>
+                                    <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft: "10px"}}>Cancel</button>
                                 </form>
                             </div>
                         </div>
